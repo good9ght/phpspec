@@ -4,7 +4,7 @@
 
 Criar spec
 ´´´sh
-./vendor/phpspec/phpspec/bin/phpspec describe MovieCollection
+./vendor/phpspec/phpspec/bin/phpspec describe [class]
 ´´´
 
 Executar o teste

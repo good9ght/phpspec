@@ -9,6 +9,11 @@ use Prophecy\Argument;
 
 class MovieCollectionSpec extends ObjectBehavior
 {
+    /*
+    |
+    | Os métodos devem começar com 'it' ou 'its'
+    |
+    */
     function it_is_initializable()
     {
         /*
