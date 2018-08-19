@@ -3,12 +3,13 @@
 ## Comandos
 
 Criar spec
-´´´sh
+```sh
 ./vendor/phpspec/phpspec/bin/phpspec describe [class]
-´´´
+```
 
 Executar o teste
-´´´sh
+```sh
 ./vendor/phpspec/phpspec/bin/phpspec run
-´´´
+```
+
 
