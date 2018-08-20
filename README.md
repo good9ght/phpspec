@@ -15,6 +15,6 @@ Executar o teste
 Gulp
 
 ```sh
-npm i -D gulp gulp-phpspec gulp-notify
+npm i -S gulp gulp-phpspec gulp-notify
 ```
 
