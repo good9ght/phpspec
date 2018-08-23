@@ -9,7 +9,7 @@ Criar spec
 
 Executar o teste
 ```sh
-./vendor/phpspec/phpspec/bin/phpspec run
+./vendor/bin/phpspec run -fpretty
 ```
 
 Gulp
