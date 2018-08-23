@@ -8,10 +8,11 @@ gulp.task('test', function() {
         .on('error', notify.onError({
             title: "Crap",
             message: "Your tests failed.",
-            icon: __dirname + '/fail.jpg'
+            icon: __dirname + '/fail.png'
         }))
         .pipe(notify({
             title: "Success",
+            icon: __dirname + '/success.png',
             message: "All tests have returned green!"
         }));
 });
