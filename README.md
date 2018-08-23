@@ -12,4 +12,9 @@ Executar o teste
 ./vendor/phpspec/phpspec/bin/phpspec run
 ```
 
+Gulp
+
+```sh
+npm i -S gulp gulp-phpspec gulp-notify
+```
 
