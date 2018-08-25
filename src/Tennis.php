@@ -4,8 +4,14 @@ namespace Acme;
 
 class Tennis
 {
-    public $player1;
-    public $player2;
+    protected $player1;
+    protected $player2;
+    protected $lookup = [
+        '0' => 'Love',
+        '1' => 'Fifteen',
+        '2' => 'Thirty',
+        '3' => 'Forty'
+    ];
 
     public function __construct($player1, $player2)
     {
@@ -15,18 +21,7 @@ class Tennis
 
     public function score()
     {
-        if($this->player1->points == 1 && $this->player2->points == 0) {
-            return 'Fifteen-Love';
-        }
-        
-        if($this->player1->points == 2 && $this->player2->points == 0) {
-            return 'Thirty-Love';
-        }
-        
-        if($this->player1->points == 3 && $this->player2->points == 0) {
-            return 'Forty-Love';
-        }
-
-        return 'Love-All';
+        $score = $this->lookup[$this->player1->points] . '-';
+        return $score .= $this->player1->points == $this->player2->points ? 'All' : $this->lookup[$this->player2->points];
     }
 }
