@@ -50,4 +50,58 @@ class TennisSpec extends ObjectBehavior
          
         $this->score()->shouldReturn('Forty-Love');
     }
+
+    function it_scores_a_4_0_game()
+    {
+        $this->john->earnPoints(4);
+         
+        $this->score()->shouldReturn('Win for John Doe');
+    }
+
+    function it_scores_a_0_4_game()
+    {
+        $this->jane->earnPoints(4);
+         
+        $this->score()->shouldReturn('Win for Jane Doe');
+    }
+    
+    function it_scores_a_4_3_game()
+    {
+        $this->john->earnPoints(4);
+        $this->jane->earnPoints(3);
+         
+        $this->score()->shouldReturn('Advantage John Doe');
+    }
+
+    function it_scores_a_3_3_game()
+    {
+        $this->john->earnPoints(3);
+        $this->jane->earnPoints(3);
+         
+        $this->score()->shouldReturn('Deuce');
+    }
+
+    function it_scores_a_3_4_game()
+    {
+        $this->john->earnPoints(3);
+        $this->jane->earnPoints(4);
+         
+        $this->score()->shouldReturn('Advantage Jane Doe');
+    }
+
+    function it_scores_a_8_8_game()
+    {
+        $this->john->earnPoints(8);
+        $this->jane->earnPoints(8);
+         
+        $this->score()->shouldReturn('Deuce');
+    }
+
+    function it_scores_a_8_9_game()
+    {
+        $this->john->earnPoints(8);
+        $this->jane->earnPoints(9);
+         
+        $this->score()->shouldReturn('Advantage Jane Doe');
+    }
 }
